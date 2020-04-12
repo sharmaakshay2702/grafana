@@ -204,7 +204,7 @@ export class CustomHeadersSettings extends PureComponent<Props, State> {
         <div className="gf-form">
           <Button
             variant="secondary"
-            icon="plus"
+            icon="plus-circle"
             onClick={e => {
               this.onHeaderAdd();
             }}

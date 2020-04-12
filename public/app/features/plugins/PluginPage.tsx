@@ -347,7 +347,7 @@ function getPluginTabsNav(
   if (true) {
     pages.push({
       text: 'Readme',
-      icon: 'fa fa-fw fa-file-text-o',
+      icon: 'file-alt',
       url: `${appSubUrl}${path}?page=${PAGE_ID_README}`,
       id: PAGE_ID_README,
     });
@@ -362,7 +362,7 @@ function getPluginTabsNav(
       if (plugin.angularConfigCtrl) {
         pages.push({
           text: 'Config',
-          icon: 'gicon gicon-cog',
+          icon: 'cog',
           url: `${appSubUrl}${path}?page=${PAGE_ID_CONFIG_CTRL}`,
           id: PAGE_ID_CONFIG_CTRL,
         });
@@ -387,7 +387,7 @@ function getPluginTabsNav(
       if (find(meta.includes, { type: PluginIncludeType.dashboard })) {
         pages.push({
           text: 'Dashboards',
-          icon: 'gicon gicon-dashboard',
+          icon: 'apps',
           url: `${appSubUrl}${path}?page=${PAGE_ID_DASHBOARDS}`,
           id: PAGE_ID_DASHBOARDS,
         });
@@ -436,7 +436,7 @@ function setActivePage(pageId: string, pages: NavModelItem[], defaultPageId: str
 function getPluginIcon(type: string) {
   switch (type) {
     case 'datasource':
-      return 'gicon gicon-datasources';
+      return 'database';
     case 'panel':
       return 'icon-gf icon-gf-panel';
     case 'app':
@@ -444,7 +444,7 @@ function getPluginIcon(type: string) {
     case 'page':
       return 'icon-gf icon-gf-endpoint-tiny';
     case 'dashboard':
-      return 'gicon gicon-dashboard';
+      return 'apps';
     default:
       return 'icon-gf icon-gf-apps';
   }

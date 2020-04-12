@@ -149,7 +149,7 @@ export const getLogRowStyles = stylesFactory((theme: GrafanaTheme, logLevel?: Lo
     `,
     logDetailsTable: css`
       label: logs-row-details-table;
-      line-height: 2;
+      line-height: 1.7;
       width: 100%;
       td:last-child {
         width: 100%;
@@ -178,7 +178,7 @@ export const getLogRowStyles = stylesFactory((theme: GrafanaTheme, logLevel?: Lo
     logDetailsValue: css`
       label: logs-row-details__row;
       position: relative;
-      vertical-align: top;
+      vertical-align: middle;
       cursor: default;
       &:hover {
         background-color: ${bgColor};

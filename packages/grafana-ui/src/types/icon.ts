@@ -116,6 +116,7 @@ export type IconName =
   | 'heart'
   | 'heart-break'
   | 'ellipsis-v'
+  | 'file-alt'
   | 'favorite';
 
 export const getAvailableIcons = (): IconName[] => [
@@ -229,4 +230,5 @@ export const getAvailableIcons = (): IconName[] => [
   'heart-break',
   'ellipsis-v',
   'favorite',
+  'file-alt',
 ];

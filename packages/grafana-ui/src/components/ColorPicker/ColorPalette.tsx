@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../Icon/Icon';
 import { sortedColors } from '../../utils';
 
 export interface Props {
@@ -23,16 +24,17 @@ export class ColorPalette extends React.Component<Props, any> {
 
   render() {
     const colorPaletteItems = this.paletteColors.map(paletteColor => {
-      const cssClass = paletteColor.toLowerCase() === this.props.color.toLowerCase() ? 'fa-circle-o' : 'fa-circle';
+      const type = paletteColor.toLowerCase() === this.props.color.toLowerCase() ? 'default' : 'mono';
       return (
-        <i
+        <Icon
           key={paletteColor}
-          className={'pointer fa ' + cssClass}
+          name="circle"
+          type={type}
           style={{ color: paletteColor }}
           onClick={this.onColorSelect(paletteColor)}
         >
           &nbsp;
-        </i>
+        </Icon>
       );
     });
     return (
